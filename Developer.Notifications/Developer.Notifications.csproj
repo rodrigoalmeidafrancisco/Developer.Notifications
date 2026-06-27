@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		
+		<PackageId>Developer.Notifications</PackageId>
+		<Version>0.0.1</Version>
+		<Authors>Rodrigo de Almeida Francisco</Authors>
+		<Product>Developer.Notifications</Product>
+		<Description>Pacote de notificações para aplicações .NET baseado no projeto Flunt feito pelo Balta.io (https://github.com/andrebaltieri/Flunt).</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageProjectUrl>https://github.com/rodrigoalmeidafrancisco/Developer.Notifications</PackageProjectUrl>
+		<PackageIcon>icon.png</PackageIcon>
+		<RepositoryUrl>https://github.com/rodrigoalmeidafrancisco/Developer.Notifications</RepositoryUrl>
+		<RepositoryType></RepositoryType>
+		<PackageTags>.net;.netcore;Domain;DDD;Notification;Validation;</PackageTags>
+		<PackageIconUrl />
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<Title>Developer.Notifications</Title>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\_Files\icon.png" Link="Files\icon.png" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Link="Files\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.Text.Json" Version="10.0.9" />
+	</ItemGroup>
+
+</Project>
