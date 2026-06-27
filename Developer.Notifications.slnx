@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="Developer.Notifications.TestProject/Developer.Notifications.TestProject.csproj" Id="acfa75da-0734-4c30-bc91-8a28ccaec2d0" />
   <Project Path="Developer.Notifications/Developer.Notifications.csproj" Id="9b493f19-feca-45ca-aba0-e6854675fff2" />
 </Solution>
