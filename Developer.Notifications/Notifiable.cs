@@ -30,7 +30,7 @@ namespace Developer.Notifications
             return (T)Activator.CreateInstance(typeof(T), new object[] { key, message });
         }
 
-        public List<string> GetNotificationsMessages()
+        public List<string> GetNotificationsMessagesDistinct()
         {
             return _notifications.Select(n => n.Message).Distinct().ToList();
         }
