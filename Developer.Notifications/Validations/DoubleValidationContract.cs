@@ -13,7 +13,7 @@ namespace Developer.Notifications.Validations
         /// <param name="val">O valor a ser verificado (The value to be checked).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNull(long? val, string message)
+        public Contract<T> IsNull(double? val, string message)
         {
             if (val == null)
                 AddNotification((string)null, message);
@@ -28,7 +28,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNull(long? val, string key, string message)
+        public Contract<T> IsNull(double? val, string key, string message)
         {
             if (val == null)
                 AddNotification(key, message);
@@ -46,7 +46,7 @@ namespace Developer.Notifications.Validations
         /// <param name="val">O valor a ser verificado (The value to be checked).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNotNull(long? val, string message)
+        public Contract<T> IsNotNull(double? val, string message)
         {
             if (val != null)
                 AddNotification((string)null, message);
@@ -61,7 +61,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNotNull(long? val, string key, string message)
+        public Contract<T> IsNotNull(double? val, string key, string message)
         {
             if (val != null)
                 AddNotification(key, message);
@@ -80,7 +80,7 @@ namespace Developer.Notifications.Validations
         /// <param name="comparer">O valor comparador (The comparer value).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsGreaterThan(long val, long comparer, string message)
+        public Contract<T> IsGreaterThan(double val, double comparer, string message)
         {
             if (val > comparer)
                 AddNotification((string)null, message);
@@ -96,7 +96,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsGreaterThan(long val, long comparer, string key, string message)
+        public Contract<T> IsGreaterThan(double val, double comparer, string key, string message)
         {
             if (val > comparer)
                 AddNotification(key, message);
@@ -115,7 +115,7 @@ namespace Developer.Notifications.Validations
         /// <param name="comparer">O valor comparador (The comparer value).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsGreaterOrEqualsThan(long val, long comparer, string message)
+        public Contract<T> IsGreaterOrEqualsThan(double val, double comparer, string message)
         {
             if (val >= comparer)
                 AddNotification((string)null, message);
@@ -131,7 +131,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsGreaterOrEqualsThan(long val, long comparer, string key, string message)
+        public Contract<T> IsGreaterOrEqualsThan(double val, double comparer, string key, string message)
         {
             if (val >= comparer)
                 AddNotification(key, message);
@@ -150,7 +150,7 @@ namespace Developer.Notifications.Validations
         /// <param name="comparer">O valor comparador (The comparer value).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsLowerThan(long val, long comparer, string message)
+        public Contract<T> IsLowerThan(double val, double comparer, string message)
         {
             if (val < comparer)
                 AddNotification((string)null, message);
@@ -166,7 +166,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsLowerThan(long val, long comparer, string key, string message)
+        public Contract<T> IsLowerThan(double val, double comparer, string key, string message)
         {
             if (val < comparer)
                 AddNotification(key, message);
@@ -185,7 +185,7 @@ namespace Developer.Notifications.Validations
         /// <param name="comparer">O valor comparador (The comparer value).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsLowerOrEqualsThan(long val, long comparer, string message)
+        public Contract<T> IsLowerOrEqualsThan(double val, double comparer, string message)
         {
             if (val <= comparer)
                 AddNotification((string)null, message);
@@ -201,7 +201,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsLowerOrEqualsThan(long val, long comparer, string key, string message)
+        public Contract<T> IsLowerOrEqualsThan(double val, double comparer, string key, string message)
         {
             if (val <= comparer)
                 AddNotification(key, message);
@@ -219,9 +219,9 @@ namespace Developer.Notifications.Validations
         /// <param name="val">O valor a ser verificado (The value to be checked).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsMinValue(long val, string message)
+        public Contract<T> IsMinValue(double val, string message)
         {
-            if (val == int.MinValue)
+            if (val == double.MinValue)
                 AddNotification((string)null, message);
 
             return this;
@@ -234,9 +234,9 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsMinValue(long val, string key, string message)
+        public Contract<T> IsMinValue(double val, string key, string message)
         {
-            if (val == long.MinValue)
+            if (val == double.MinValue)
                 AddNotification(key, message);
 
             return this;
@@ -252,9 +252,9 @@ namespace Developer.Notifications.Validations
         /// <param name="val">O valor a ser verificado (The value to be checked).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNotMinValue(long val, string message)
+        public Contract<T> IsNotMinValue(double val, string message)
         {
-            if (val != long.MinValue)
+            if (val != double.MinValue)
                 AddNotification((string)null, message);
 
             return this;
@@ -267,9 +267,9 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNotMinValue(long val, string key, string message)
+        public Contract<T> IsNotMinValue(double val, string key, string message)
         {
-            if (val != long.MinValue)
+            if (val != double.MinValue)
                 AddNotification(key, message);
 
             return this;
@@ -285,9 +285,9 @@ namespace Developer.Notifications.Validations
         /// <param name="val">O valor a ser verificado (The value to be checked).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsMaxValue(long val, string message)
+        public Contract<T> IsMaxValue(double val, string message)
         {
-            if (val == long.MaxValue)
+            if (val == double.MaxValue)
                 AddNotification((string)null, message);
 
             return this;
@@ -300,9 +300,9 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsMaxValue(long val, string key, string message)
+        public Contract<T> IsMaxValue(double val, string key, string message)
         {
-            if (val == long.MaxValue)
+            if (val == double.MaxValue)
                 AddNotification(key, message);
 
             return this;
@@ -318,9 +318,9 @@ namespace Developer.Notifications.Validations
         /// <param name="val">O valor a ser verificado (The value to be checked).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNotMaxValue(long val, string message)
+        public Contract<T> IsNotMaxValue(double val, string message)
         {
-            if (val != long.MaxValue)
+            if (val != double.MaxValue)
                 AddNotification((string)null, message);
 
             return this;
@@ -333,9 +333,9 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNotMaxValue(long val, string key, string message)
+        public Contract<T> IsNotMaxValue(double val, string key, string message)
         {
-            if (val != long.MaxValue)
+            if (val != double.MaxValue)
                 AddNotification(key, message);
 
             return this;
@@ -352,7 +352,7 @@ namespace Developer.Notifications.Validations
         /// <param name="comparer">O valor comparador (The comparer value).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> AreEquals(long val, long comparer, string message)
+        public Contract<T> AreEquals(double val, double comparer, string message)
         {
             if (val == comparer)
                 AddNotification((string)null, message);
@@ -368,7 +368,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> AreEquals(long val, long comparer, string key, string message)
+        public Contract<T> AreEquals(double val, double comparer, string key, string message)
         {
             if (val == comparer)
                 AddNotification(key, message);
@@ -387,7 +387,7 @@ namespace Developer.Notifications.Validations
         /// <param name="comparer">O valor comparador (The comparer value).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> AreNotEquals(long val, long comparer, string message)
+        public Contract<T> AreNotEquals(double val, double comparer, string message)
         {
             if (val != comparer)
                 AddNotification((string)null, message);
@@ -403,7 +403,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> AreNotEquals(long val, long comparer, string key, string message)
+        public Contract<T> AreNotEquals(double val, double comparer, string key, string message)
         {
             if (val != comparer)
                 AddNotification(key, message);
@@ -423,7 +423,7 @@ namespace Developer.Notifications.Validations
         /// <param name="end">O valor final do intervalo (The end value of the range).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsBetween(long val, long start, long end, string message)
+        public Contract<T> IsBetween(double val, double start, double end, string message)
         {
             if (val >= start && val <= end)
                 AddNotification((string)null, message);
@@ -440,7 +440,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsBetween(long val, long start, long end, string key, string message)
+        public Contract<T> IsBetween(double val, double start, double end, string key, string message)
         {
             if (val >= start && val <= end)
                 AddNotification(key, message);
@@ -460,7 +460,7 @@ namespace Developer.Notifications.Validations
         /// <param name="end">O valor final do intervalo (The end value of the range).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNotBetween(long val, long start, long end, string message)
+        public Contract<T> IsNotBetween(double val, double start, double end, string message)
         {
             if (val < start || val > end)
                 AddNotification((string)null, message);
@@ -477,7 +477,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> IsNotBetween(long val, long start, long end, string key, string message)
+        public Contract<T> IsNotBetween(double val, double start, double end, string key, string message)
         {
             if (val < start || val > end)
                 AddNotification(key, message);
@@ -496,7 +496,7 @@ namespace Developer.Notifications.Validations
         /// <param name="list">A lista de valores (The list of values).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> Contains(long val, IEnumerable<long> list, string message)
+        public Contract<T> Contains(double val, IEnumerable<double> list, string message)
         {
             if (list.Any(x => x == val))
                 AddNotification((string)null, message);
@@ -512,7 +512,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> Contains(long val, IEnumerable<long> list, string key, string message)
+        public Contract<T> Contains(double val, IEnumerable<double> list, string key, string message)
         {
             if (list.Any(x => x == val))
                 AddNotification(key, message);
@@ -531,7 +531,7 @@ namespace Developer.Notifications.Validations
         /// <param name="list">A lista de valores (The list of values).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> NotContains(long val, IEnumerable<long> list, string message)
+        public Contract<T> NotContains(double val, IEnumerable<double> list, string message)
         {
             if (!list.Any(x => x == val))
                 AddNotification((string)null, message);
@@ -547,7 +547,7 @@ namespace Developer.Notifications.Validations
         /// <param name="key">A chave da notificação (The key of the notification).</param>
         /// <param name="message">A mensagem de notificação (Custom notification message).</param>
         /// <returns></returns>
-        public Contract<T> NotContains(long val, IEnumerable<long> list, string key, string message)
+        public Contract<T> NotContains(double val, IEnumerable<double> list, string key, string message)
         {
             if (!list.Any(x => x == val))
                 AddNotification(key, message);
@@ -556,5 +556,6 @@ namespace Developer.Notifications.Validations
         }
 
         #endregion NotContains (Não contém)
+
     }
 }
